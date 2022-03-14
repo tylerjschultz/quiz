@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Code Quiz</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#high-scores" id=view-high-scores>View High Scores</a>
+        </div>
+        <div id="counter">
+            <p>Time: 0</p>
+        </div>
+    </header>
+    <main>
+        <!-- Quiz intro -->
+        <section id="page-content">
+            <h2 id="quiz-title">Coding Quiz Challenge</h2>
+            <p>Try to answer the following code-related questions within the time limit.<br>
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button type="button" id="start-btn" class="btn">Start Quiz</button>
+        </section>
+
+        <!-- Questions container-->
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="question">
+                    <h2>Question</h2>
+                </div>
+                <ul id="answer-buttons" class="btn-list">
+                    <button class="btn ans-btn" id="1">1. Answer</button>
+                    <button class="btn ans-btn" id="2">2. Answer</button>
+                    <button class="btn ans-btn" id="3">3. Answer</button>
+                    <button class="btn ans-btn" id="4">4. Answer</button>
+                </ul>
+
+                <!-- Display results -->
+                <footer id="response"></footer>
+            </div>
+
+            <!-- End Quiz Results -->
+            <div id="results-box" class="hide">
+                <h2 class="results-title">All Done!</h2>
+                <p id="score-text">Your final score is </p>
+                <form>
+                    Enter your initials: 
+                    <input id="user-initials" placeholder="Your Initials"/>
+                    <button id="save-score-btn" class="btn">Save</button>
+                </form>
+            </div> 
+
+            <!-- Display High Scores-->
+            <div id="high-scores" class="hide">
+                <h2 id="high-scores-title">High Scores</h2>
+                <ol id="high-scores-list"></ol>
+                <button id="try-again" class="btn">
+                    <a href="index.html">Try Again!</a>
+                </button>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <script src="./assets/quiz.js"></script>
+</body>
